@@ -60,7 +60,9 @@ export function AppLayout() {
       <main className="main-panel">
         <header className="topbar">
           <div>
-            <p className="eyebrow">Personal Analytics</p>
+            <p className="eyebrow" style={{ color: '#090081' }}>
+              Personal Analytics
+            </p>
             <h1>{state.userName}</h1>
           </div>
           <div className="status-pill">

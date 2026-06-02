@@ -65,9 +65,9 @@ export function ManualLogForm() {
         </label>
         <label>
           카테고리
-          <select value={category} onChange={(event) => setCategory(event.target.value)}>
+          <select value={category} onChange={(event) => setCategory(event.target.value)} >
             {categoryOptions.map((option) => (
-              <option key={option} value={option}>
+              <option key={option} value={option} style={{ color: '#02061e' }}>
                 {option}
               </option>
             ))}

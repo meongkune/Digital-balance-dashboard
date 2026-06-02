@@ -31,9 +31,11 @@ export function RuleManager() {
       <form className="rule-form" onSubmit={handleSubmit}>
         <input value={keyword} onChange={(event) => setKeyword(event.target.value)} placeholder="앱/사이트 키워드" />
         <select value={type} onChange={(event) => setType(event.target.value as ProductivityType)}>
-          <option value="productive">생산</option>
-          <option value="neutral">중립</option>
-          <option value="unproductive">비생산</option>
+          <option value="productive" style={{ color: '#02061e' }}>생산</option>
+          <option value="neutral" style={{ color: '#02061e' }}>
+            중립
+          </option>
+          <option value="unproductive" style={{ color: '#02061e' }}>비생산</option>
         </select>
         <button className="primary-action compact" disabled={!canSubmit} type="submit">
           <Plus size={18} />
