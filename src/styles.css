@@ -1213,7 +1213,7 @@ body {
 }
 
 .nav-list {
-  gap: 13px;
+  gap: 13px;  
 }
 
 .nav-link {
@@ -1415,7 +1415,7 @@ select:focus {
 }
 
 .usage-row {
-  grid-template-columns: 10px minmax(140px, 1fr) 72px 76px 42px;
+  grid-template-columns: 10px minmax(0, 1fr) 72px 76px 42px;
 }
 
 .usage-accent,
@@ -1461,5 +1461,43 @@ select:focus {
   .page-title,
   .hero-panel {
     border-radius: 20px;
+  }
+}
+
+/* Final layout safety */
+.usage-row {
+  grid-template-columns: 10px minmax(0, 1fr) auto auto 40px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.usage-row > div {
+  min-width: 0;
+}
+
+.usage-row strong,
+.usage-row span,
+.usage-row small {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.usage-row em,
+.usage-row b,
+.usage-row .icon-button,
+.usage-row .read-only-cell {
+  justify-self: start;
+}
+
+@media (max-width: 980px) {
+  .usage-row {
+    grid-template-columns: 10px minmax(0, 1fr) auto;
+  }
+
+  .usage-row em,
+  .usage-row b,
+  .usage-row .icon-button,
+  .usage-row .read-only-cell {
+    grid-column: 2;
   }
 }

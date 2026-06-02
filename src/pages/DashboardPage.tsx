@@ -8,7 +8,6 @@ import { ProductivityChart } from '../components/ProductivityChart';
 import { QuickTimer } from '../components/QuickTimer';
 import { SampleDataToggle } from '../components/SampleDataToggle';
 import { SummaryCard } from '../components/SummaryCard';
-import { WeeklyReport } from '../components/WeeklyReport';
 import { buildUsageSummary, formatDuration } from '../domain/activity';
 import { useVisibleLogs } from '../hooks/useVisibleLogs';
 import { useDashboard } from '../state/DashboardContext';
@@ -85,7 +84,6 @@ export function DashboardPage() {
           />
           <QuickTimer />
           <ManualLogForm />
-          <WeeklyReport logs={visibleLogs} />
         </div>
       </div>
     </div>

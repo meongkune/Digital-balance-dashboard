@@ -3,7 +3,6 @@ import { useMemo } from 'react';
 import { FocusGauge } from '../components/FocusGauge';
 import { ProductivityChart } from '../components/ProductivityChart';
 import { SampleDataToggle } from '../components/SampleDataToggle';
-import { WeeklyReport } from '../components/WeeklyReport';
 import { SummaryCard } from '../components/SummaryCard';
 import { buildUsageSummary, formatDuration } from '../domain/activity';
 import { useVisibleLogs } from '../hooks/useVisibleLogs';
@@ -45,7 +44,6 @@ export function ReportsPage() {
           value={summary.productiveRate}
         />
       </div>
-      <WeeklyReport logs={visibleLogs} />
     </div>
   );
 }

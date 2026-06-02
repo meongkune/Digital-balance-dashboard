@@ -63,9 +63,15 @@ export function ActivityManager() {
         <label>
           분류
           <select value={type} onChange={(event) => handleTypeChange(event.target.value as ProductivityType)}>
-            <option value="productive">생산</option>
-            <option value="neutral">중립</option>
-            <option value="unproductive">비생산</option>
+            <option value="productive" style={{ color: '#02061e' }}>
+              생산
+            </option>
+            <option value="neutral" style={{ color: '#02061e' }}>
+              중립
+            </option>
+            <option value="unproductive" style={{ color: '#02061e' }}>
+              비생산
+            </option>
           </select>
         </label>
         <label>
